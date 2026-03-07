@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #2C3E2D;
+  --color-bg: #F4F1EA;
+  --color-accent: #8B5A2B;
+  --font-sans: system-ui, ui-sans-serif, sans-serif;
+}
+
+/* Skip link: visible when focused for a11y */
+.sr-only-focusable:focus {
+  position: absolute;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0.75rem 1rem;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+  z-index: 100;
+  left: 1rem;
+  top: 1rem;
+  background: var(--color-primary);
+  color: var(--color-bg);
+  border-radius: 0.25rem;
+}

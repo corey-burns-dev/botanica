@@ -1,0 +1,16 @@
+---
+const infoBlocks = [
+  { title: 'Sustainably Grown', desc: 'Sourced from local independent nurseries committed to eco-friendly practices.' },
+  { title: 'Safe Delivery', desc: 'Securely packaged in climate-controlled housing to ensure healthy arrival.' },
+  { title: 'Expert Guidance', desc: 'Lifetime support from our team of horticulturists via chat or email.' },
+  { title: '30-Day Guarantee', desc: 'If your plant arrives unhappy, we will replace it unconditionally.' },
+];
+---
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4" aria-label="Why choose us">
+  {infoBlocks.map((info, idx) => (
+    <div class={`border-b-4 border-primary p-8 md:border-r-4 lg:border-b-0 ${idx === 3 ? 'md:border-r-0' : ''} ${idx === 1 ? 'md:border-r-0 lg:border-r-4' : ''}`}>
+      <h3 class="mb-4 text-lg font-black uppercase tracking-tight text-accent">{info.title}</h3>
+      <p class="text-sm font-medium leading-relaxed">{info.desc}</p>
+    </div>
+  ))}
+</section>

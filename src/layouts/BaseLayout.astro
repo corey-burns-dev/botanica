@@ -1,0 +1,22 @@
+---
+/**
+ * Base layout – semantic HTML and meta for Lighthouse (SEO, a11y, performance).
+ */
+import '../styles/global.css';
+const { title = 'Botanica – Curated Plants for Modern Spaces', description = 'Curated architectural plants for the modern sanctuary. Grown with intention, delivered with care.' } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#2C3E2D" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
+    <title>{title}</title>
+  </head>
+  <body class="min-h-screen bg-[#F4F1EA] text-[#2C3E2D] font-sans antialiased selection:bg-[#2C3E2D] selection:text-[#F4F1EA]">
+    <slot />
+  </body>
+</html>

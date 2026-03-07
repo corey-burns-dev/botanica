@@ -1,0 +1,46 @@
+---
+const exploreLinks = ['All Plants', 'Planters', 'Care Accessories', 'Gift Cards', 'Journal'];
+const supportLinks = ['FAQ', 'Shipping & Returns', 'Plant Care Guide', 'Contact Us'];
+---
+<footer class="border-t-4 border-primary bg-primary text-bg">
+  <div class="grid grid-cols-1 gap-12 border-b border-bg/20 px-6 py-16 md:grid-cols-2 lg:grid-cols-4 md:px-12">
+    <div class="space-y-6">
+      <a href="/" class="flex items-center gap-2 text-3xl font-black uppercase tracking-tighter">
+        <svg class="h-8 w-8 text-accent" viewBox="0 0 24 24" fill="currentColor"><path d="M17 8C8 10 5.9 16.17 3.2 21.2c-.2.4.2.7.6.5 3.2-1.5 6.5-2.3 10-2.3 1.4 0 2.8.2 4.1.5.3.1.6-.2.5-.5C18.4 12.3 18 10 17 8z"/></svg>
+        Botanica
+      </a>
+      <p class="max-w-xs text-sm font-medium text-bg/70">Elevating interior spaces with premium, architecturally significant foliage.</p>
+    </div>
+    <nav aria-label="Explore">
+      <h4 class="mb-6 font-bold uppercase tracking-widest text-accent">Explore</h4>
+      <ul class="space-y-4 text-sm font-medium" role="list">
+        {exploreLinks.map((link) => <li><a href="#" class="transition-colors hover:text-accent">{link}</a></li>)}
+      </ul>
+    </nav>
+    <nav aria-label="Support">
+      <h4 class="mb-6 font-bold uppercase tracking-widest text-accent">Support</h4>
+      <ul class="space-y-4 text-sm font-medium" role="list">
+        {supportLinks.map((link) => <li><a href="#" class="transition-colors hover:text-accent">{link}</a></li>)}
+      </ul>
+    </nav>
+    <div>
+      <h4 class="mb-6 font-bold uppercase tracking-widest text-accent">Newsletter</h4>
+      <p class="mb-4 text-sm font-medium text-bg/70">Subscribe for care tips and early access to rare restocks.</p>
+      <form class="flex" action="#" method="post" aria-label="Newsletter signup">
+        <label for="footer-email" class="sr-only">Email</label>
+        <input id="footer-email" type="email" name="email" placeholder="Enter email" required class="w-full border-2 border-bg bg-transparent px-4 py-3 text-sm font-bold uppercase placeholder-bg/50 outline-none focus:border-accent" />
+        <button type="submit" class="border-2 border-l-0 border-bg bg-bg px-6 text-primary transition-colors hover:bg-accent hover:border-accent">
+          <span class="sr-only">Subscribe</span>
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </button>
+      </form>
+    </div>
+  </div>
+  <div class="flex flex-col items-center justify-between gap-4 px-6 py-6 md:flex-row md:px-12">
+    <p class="text-xs font-bold uppercase tracking-widest text-bg/50">© {new Date().getFullYear()} Botanica. All rights reserved.</p>
+    <div class="flex gap-6 text-xs font-bold uppercase tracking-widest text-bg/50">
+      <a href="#" class="hover:text-bg">Privacy</a>
+      <a href="#" class="hover:text-bg">Terms</a>
+    </div>
+  </div>
+</footer>

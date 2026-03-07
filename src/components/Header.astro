@@ -1,0 +1,32 @@
+---
+const navLinks = ['Shop', 'Care Guide', 'Journal', 'About'];
+---
+<header class="sticky top-0 z-50 border-b-4 border-primary bg-bg px-6 py-4 md:px-12">
+  <nav class="flex items-center justify-between" aria-label="Main">
+    <div class="flex items-center gap-4">
+      <button type="button" class="flex h-12 w-12 items-center justify-center border-2 border-primary transition-colors hover:bg-primary hover:text-bg" aria-label="Open menu">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+      <ul class="hidden items-center gap-6 md:flex" role="list">
+        {navLinks.map((item) => (
+          <li><a href="#shop" class="text-sm font-bold uppercase tracking-widest transition-opacity hover:opacity-70">{item}</a></li>
+        ))}
+      </ul>
+    </div>
+
+    <a href="/" class="flex items-center gap-2 text-2xl font-black uppercase tracking-tighter md:text-3xl">
+      <svg class="h-6 w-6 text-accent" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17 8C8 10 5.9 16.17 3.2 21.2c-.2.4.2.7.6.5 3.2-1.5 6.5-2.3 10-2.3 1.4 0 2.8.2 4.1.5.3.1.6-.2.5-.5C18.4 12.3 18 10 17 8z"/><path d="M14 2c-1 0-1.9.7-2.2 1.7l-.4 1.2 1.2-.4C13.3 4.1 14 3 14 2z"/></svg>
+      Botanica
+    </a>
+
+    <div class="flex items-center gap-4">
+      <button type="button" class="hidden h-12 w-12 items-center justify-center border-2 border-primary transition-colors hover:bg-primary hover:text-bg md:flex" aria-label="Search">
+        <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+      </button>
+      <button type="button" class="flex h-12 items-center justify-center gap-2 border-2 border-primary bg-primary px-6 text-bg transition-colors hover:bg-transparent hover:text-primary">
+        <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+        <span class="text-sm font-bold tracking-widest">Cart (0)</span>
+      </button>
+    </div>
+  </nav>
+</header>
