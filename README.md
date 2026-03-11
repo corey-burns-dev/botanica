@@ -1,34 +1,23 @@
 # Botanica
 
-A high-performance plant storefront demo built with **Astro** and **JavaScript**. Designed for top Lighthouse scores (performance, accessibility, SEO, best practices).
+Botanica is a plant storefront demo built with Astro. The site is designed around clean merchandising, fast static delivery, and good default accessibility.
 
-## Run locally
+## Highlights
 
-```bash
-npm install
-npm run dev
-```
+- Editorial storefront layout
+- Static Astro build with lightweight styling
+- Performance-focused markup and asset handling
 
-Open [http://localhost:4321](http://localhost:4321).
-
-## Build
+## Quick start
 
 ```bash
-npm run build
-npm run preview   # preview production build
+bun install
+bun run dev
 ```
 
-## Lighthouse optimizations
+Build and preview:
 
-- **Semantic HTML**: `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<footer>`, landmarks and headings
-- **Accessibility**: Skip link, `aria-label` on nav/buttons, form labels, focus styles
-- **Performance**: Static output, no client JS by default, `loading="lazy"` and explicit `width`/`height` on images, `fetchpriority="high"` only on LCP hero image, `preconnect` for image origin
-- **SEO**: Meta description, theme-color, single H1, descriptive alt text
-
-## Stack
-
-- [Astro](https://astro.build) (static)
-- [Tailwind CSS](https://tailwindcss.com) via `@astrojs/tailwind`
-- No TypeScript (JS only in `.astro` frontmatter and config)
-
-Design inspired by the Botanica template (templates/src/pages/201-250/249-Botanica.tsx).
+```bash
+bun run build
+bun run preview
+```
